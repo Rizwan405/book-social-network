@@ -1,0 +1,45 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/book_social_network
+    username: rizwan
+    password: rizwan312
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+      database: postgresql
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
+  mail:
+    host: localhost
+    port: 1025
+    username: rizwan
+    password: rizwan
+    properties:
+      mail:
+        smtp:
+          trust: "*"
+        auth: true
+        starttls:
+          enable: true
+        connectiontimeout: 5000
+        timeout: 3000
+        writetimeout: 5000
+application:
+  security:
+    jwt:
+      secret-key: 66698983372e068e89e9195ab35b0f843fd5c02dfe858de38cc8656ab36c792eb3fa96517d87d2400609ee58d359d1a0a312d5bbfc79805ed92c4bba843affe693bf71152e794f3f20e41b7a2df67b78890be026601e1247751db71bab2fedefe8ee04ec8c7e370ccf5d1177f4ef87d91fa12ebf1b29b8db6cd858cebeda4d6d5dd06bc84efae6a754c9b8c029b1959fd9afbb2c9a5f436bfab8e74f6eba0a7f9c065f7cf3f86dc0f330b4e0c45e72a2f67b653356ca41a1f7f865823da5df1a5c12006051e6af10e1a20a63a66e80fe611e8df907c1d69c63f693c7e4a383b3296177cc27074473ede8c43d459c50cfaa9028f37d11561d50ed357bfc1c00cc
+      expiration: 8640000
+  mailing:
+    frontend:
+      activation-url: http://localhost:4200/activate-account
+  file:
+    uploads:
+      photos-output-path: ./uploads
+
+server:
+  port: 8088
+

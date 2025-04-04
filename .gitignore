@@ -1,0 +1,21 @@
+# Frontend
+node_modules/
+dist/
+.angular/cache/
+
+# Backend
+target/
+.idea/
+*.iml
+
+# System
+.DS_Store
+*.log
+
+# Dependency files
+package-lock.json
+yarn.lock
+
+# User uploads (if not meant to be versioned)
+uploads/
+.qodo
